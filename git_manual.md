@@ -2,6 +2,10 @@
 
 
 
+git config~~~~~~~~~~~~
+
+
+
 git init
 
 git README.md
@@ -129,4 +133,64 @@ git branch -d 가지이름
 git push origin master 하면 branch 는 빼고 master만 올라감
 
 다른것도 올리고 싶다면 git push origin 가지이름
+
+
+
+
+
+듀얼리모트하기
+
+git remote add **github** https://github.com/landformdev/learn_git.git
+
+git push github master
+
+자기가 알아서 지정 가능!
+
+
+
+git remote 협업하기
+
+
+
+A
+
+README, ignore(python..등등) 체크 가능
+
+commit 이 찍히고 branch는 main이 기본
+
+...(setting)에 가서 manage access에서 collaborator추가 -> B에게 메일로 초대가 옴
+
+code에 https복사
+
+수정 후
+
+add commit 하고
+
+git push origin main
+
+git pull 로 받아옴
+
+
+
+
+
+B
+
+code에 https복사
+
+수정 후
+
+add commit 하고
+
+git push origin main
+
+git pull 로 받아옴
+
+
+
+
+
+
+
+
 
