@@ -150,43 +150,27 @@ git push github master
 
 git remote 협업하기
 
+| A                                                            | B                    |
+| ------------------------------------------------------------ | -------------------- |
+| README, ignore(python..등등) 체크 가능                       |                      |
+| commit 이 찍히고 branch는 main이 기본                        |                      |
+| ...(setting)에 가서 manage access에서 collaborator추가 -> B에게 메일로 초대가 옴 |                      |
+| code에 https복사                                             | code에 https복사     |
+| 수정 후                                                      | 수정 후              |
+| add commit 하고                                              | add commit 하고      |
+| git push origin main                                         | git push origin main |
+| git pull 로 받아옴                                           | git pull 로 받아옴   |
 
 
-A
+동시에 작성하고 add commit  할 경우 push 먼저한쪽으로 올라감 (B가 먼저함)
 
-README, ignore(python..등등) 체크 가능
+늦은쪽은 push가 안됨 (A)
 
-commit 이 찍히고 branch는 main이 기본
+pull먼저 해야함
 
-...(setting)에 가서 manage access에서 collaborator추가 -> B에게 메일로 초대가 옴
+merge하고 push (A가 주관적으로 함)    ======> 먼가 문제가 있지 않나?? branch가 필요!
 
-code에 https복사
-
-수정 후
-
-add commit 하고
-
-git push origin main
-
-git pull 로 받아옴
-
-
-
-
-
-B
-
-code에 https복사
-
-수정 후
-
-add commit 하고
-
-git push origin main
-
-git pull 로 받아옴
-
-
+![image-20210202174214317](git_manual.assets/image-20210202174214317.png)
 
 
 
