@@ -85,3 +85,15 @@ greed system
 
 
 ctrl + alt + 방향키 위 아래 : 멀티 커서
+
+
+
+`<p></p>`는 문단이라 밑에 마진 들어가 있음
+
+container : 양옆을 어느정도 비워줌
+
+column안에 또 row 만들기 가능
+
+img-fluid : 이미지 비율 자동 조정
+
+gutter는 row에 줘서 column사이의 간격을 조정하는 것 (column에 줘서 따로 조정도 가능)
