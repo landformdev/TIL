@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from datetime import datetime
 
 def index(request):
     
@@ -10,8 +11,10 @@ def index(request):
 
 def hello(request):
     name = 'jojo'
+
     context = {
-        'name' : name
+        'name' : name,
+        'datetime': datetime.now()
     }
     return render(request, 'hello.html', context)
 
@@ -32,6 +35,7 @@ def throw(request):
 def catch(request):
     
     context = {
-        'message': request.GET.get('message')
+        'message': request.GET.get('message'),
+        'greeting': request.GET.get('greeting')
     }
     return render(request, 'catch.html', context)
