@@ -9,8 +9,11 @@ def index(request):
 
     articles = Article.objects.order_by('-pk')
 
+
+
     context = {
-        'articles' : articles
+        'articles' : articles,
+      
     }
 
     return render(request, 'articles/index.html', context)

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST">
+{% csrf_token %}
+{% comment %} <input type="text" name='title'>
+<textarea name="content" id="" cols="30" rows="10"></textarea> {% endcomment %}
+
+{{ form.as_p }}
+
+<button>작성</button>
+
+</form>
+
+{% endblock content %}
