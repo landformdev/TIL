@@ -23,6 +23,8 @@ def detail(request, pk):
     context = {
         'article' : article
     }
+    return render(request, 'articles/detail.html', context)
+
 
 def create(request):
     """
@@ -37,7 +39,7 @@ def create(request):
         if form.is_valid():
             article = form.save()  # 꼭 vaild 다음에 써야함
         
-            return render(request, 'articles:detail', article.pk)
+            return redirect('articles:detail', article.pk)
 
     else:
         # GET : form 클래스 사용!
@@ -50,13 +52,16 @@ def create(request):
 
 
 def update(request, pk):
-    if request.mothod == "POST":
-        ArticleForm(request.POST, instance=article)
+    article = get_object_or_404(Article, pk=pk)
+
+    if request.method == "POST":
+        form = ArticleForm(request.POST, instance=article)
+
         if form.is_valid():
-            form.save()
+            article = form.save()
             return redirect('articles:detail', article.pk)
     else:
-        article = Article.objects.get(pk=pk)
+        form = ArticleForm(instance=article)
     context = {
         'form' : form
     }
