@@ -1,0 +1,6 @@
+<h1>게시판</h1>
+
+{% for article in articles %}
+  <p>{{article.pk}}. {{article.title}}</p>
+  <p>{{article.content}}</p>
+{% endfor %}

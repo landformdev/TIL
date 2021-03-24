@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>제목 : {{article.title}}</h2>
+<h2>내용 : {{article.content}}</h2>
+
+
+<a href="{% url 'articles:edit' article.pk %}">🛠</a>
+
+
+<form action="{% url 'articles:delete' article.pk %}" method="POST">
+  {% csrf_token %}
+    <button>🗑</button>
+</form>
+
+
+
+{% endblock content %}
+
+
+

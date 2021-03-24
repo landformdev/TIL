@@ -1,0 +1,13 @@
+<h1>새 글 쓰기</h1>
+
+<form action=" {% url 'articles:create' %}" meothod="GET">
+  {% comment %} 제목 {% endcomment %}
+  <input type="text" name='title'>
+
+  {% comment %} 내용 {% endcomment %}
+  <textarea name="content" id="" cols="30" rows="10"></textarea>
+
+  {% comment %} 제출버튼 {% endcomment %}
+  <button>작성</button>
+
+</form>
