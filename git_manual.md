@@ -221,6 +221,39 @@ merge하고 push (A가 주관적으로 함)    ======> 먼가 문제가 있지 �
 
 
 
+###########################################################################################################
+
+## GIT 협업 폴리~
+
+git branch ???  : 생성
+
+git switch ???  : 이동
+
+
+
+브랜치에서 작성 후 마스터로 합치려는데 마스터에 변경사항이 있을시 마스터로 이동해서 pull 먼저 한 후 병합
+
+마스터에서 git merge ???
+
+add commit push
+
+
+
+merge request(gitlab) == pull request(github)
+
+
+
+
+
+* 다른 사람 프로젝트 수정 요청 보내기
+
+1. ![image-20210402102808599](git_manual.assets/image-20210402102808599.png)Fork를 통해 다른 프로젝트를 내 계정으로 복사
+2.  포크된 내 프로젝트에서 clone
+3. 수정후 add commit push
+4. gitlab가서 merge request  보내기
+
+
+
 
 
 
