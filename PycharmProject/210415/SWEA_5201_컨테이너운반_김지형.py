@@ -16,6 +16,8 @@ for tc in range(1, int(input()) + 1):
 
     weights = list(map(int, input().split()))  # 화물무게
     trucks = list(map(int, input().split()))  # 적재용량
+    weights = sorted(weights, reverse=True)
+    trucks = sorted(trucks, reverse=True)
 
     result = badal(N, M)
 
